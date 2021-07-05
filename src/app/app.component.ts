@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
+import { DispatcherService } from './core/services/dispatcher.service';
+import { UserService } from './core/services/user.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ello';
+  // constructor(@Inject(UserService) public us: UserService) {
+  // }
+  constructor (public dispatcher: DispatcherService) {}
 }
