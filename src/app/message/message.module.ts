@@ -3,7 +3,14 @@ import { CommonModule } from '@angular/common';
 import { MessageListComponent } from './message-list/message-list.component';
 import { MessageItemComponent } from './message-item/message-item.component';
 import { MessageEditorComponent } from './message-editor/message-editor.component';
+import { RouterModule, Routes } from '@angular/router';
 
+const routes: Routes = [
+  {
+    path: '',
+    component: MessageListComponent
+  }
+]
 
 
 @NgModule({
@@ -13,12 +20,14 @@ import { MessageEditorComponent } from './message-editor/message-editor.componen
     MessageEditorComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule.forChild(routes)
   ],
   exports: [
     MessageListComponent,
     MessageItemComponent,
-    MessageEditorComponent
+    MessageEditorComponent,
+    RouterModule
   ]
 })
 export class MessageModule { }

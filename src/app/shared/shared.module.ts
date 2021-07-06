@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UiModule } from '../ui/ui.module';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { MatImportModule } from '../mat-import/mat-import.module'
 
 
 
@@ -11,7 +12,8 @@ import { HttpClientModule } from '@angular/common/http'
     CommonModule,
     UiModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatImportModule
   ]
 })
 export class SharedModule { }

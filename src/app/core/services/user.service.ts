@@ -14,6 +14,7 @@ export class UserService implements Manager<User> {
   }
 
   data$ = new BehaviorSubject<User[]>([]);
+  currentUser$ = new BehaviorSubject<User|null>(null);
 
   create (data: Partial<User>): Observable<User|null> {
     return of(null)
@@ -21,5 +22,15 @@ export class UserService implements Manager<User> {
 
   private load () {
     this.http.get<User[]>(API).subscribe(data => this.data$.next(data))
+  }
+
+  public login (username: string) {
+    this.http.get<User[]>(API+`?name=${username}`).subscribe(users => {
+      users.length && this.currentUser$.next(users[0])
+    })
+    
+    this.currentUser$.next({
+      name: username
+    })
   }
 }

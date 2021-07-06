@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
-import { LoginModule } from '../login/login.module';
-import { MessageModule } from '../message/message.module';
 import { PageComponent } from './page.component';
 import { SharedModule } from '../shared/shared.module';
+import { RouterModule } from '@angular/router';
+import { MatImportModule } from '../mat-import/mat-import.module';
+import { LoginModule } from '../login/login.module';
 
 
 @NgModule({
@@ -11,8 +12,9 @@ import { SharedModule } from '../shared/shared.module';
   ],
   imports: [
     SharedModule,
-    LoginModule,
-    MessageModule
+    RouterModule,
+    MatImportModule
+    
   ],
   exports: [
     PageComponent

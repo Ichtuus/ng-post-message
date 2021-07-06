@@ -1,0 +1,22 @@
+<app-ui-header>{{ pageTitle }}</app-ui-header>
+<main>
+    <a 
+        mat-raised-button   
+        routerLink='/home' 
+        [color]="home.isActive && 'accent'" 
+        routerLinkActive='active'
+        #home='routerLinkActive'>Home
+    </a>
+
+    <a 
+        mat-raised-button 
+        routerLink='/messages' 
+        [color]="message.isActive && 'accent'" 
+        routerLinkActive='active'
+        #message='routerLinkActive'>Messages
+    </a>
+
+    <mat-card>
+        <router-outlet></router-outlet>
+    </mat-card>
+</main>

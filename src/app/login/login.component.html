@@ -1,1 +1,17 @@
-<p>login works!</p>
+
+<form #elloForm="ngForm" class="example-form" (click)='sendMessage(elloForm)'>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>name</mat-label>
+      <input required 
+        minlength="2"
+        maxlength="12" 
+        name="username" 
+        type="text" 
+        matInput 
+        [(ngModel)]="username">
+    </mat-form-field>
+    <br>
+    <!-- <em  *ngIf="elloForm.dirty && elloForm.touched">Erreur dans le formulaire</em> -->
+    <button>Envoyer</button>
+  </form>
+  
