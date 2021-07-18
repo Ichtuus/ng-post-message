@@ -1,0 +1,5 @@
+<button mat-raised-button (click)="loadMessagesHandler()">Load</button>
+<!-- <mat-spinner *ngIf="(store.loading | async )"></mat-spinner> -->
+<pre>
+    {{store | async | json}}
+</pre>

@@ -1,5 +1,4 @@
 import { Component, Inject } from '@angular/core';
-import { DispatcherService } from './core/services/dispatcher.service';
 import { UserService } from './core/services/user.service';
 
 @Component({
@@ -10,5 +9,5 @@ import { UserService } from './core/services/user.service';
 export class AppComponent {
   // constructor(@Inject(UserService) public us: UserService) {
   // }
-  constructor (public dispatcher: DispatcherService) {}
+  constructor () {}
 }

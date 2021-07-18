@@ -5,4 +5,5 @@ export interface ApplicationState {
     currentUser: User|null
     users: User[]
     messages: Message[]
+    loading: Boolean
 }

@@ -1,8 +1,7 @@
-
-<form #elloForm="ngForm" class="example-form" (click)='sendMessage(elloForm)'>
+<form class="example-form" (click)="sendMessage()">
     <mat-form-field class="example-full-width" appearance="fill">
       <mat-label>name</mat-label>
-      <input required 
+      <input required
         minlength="2"
         maxlength="12" 
         name="username" 

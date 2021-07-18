@@ -1,8 +1,6 @@
 import { Component, OnInit, Optional } from '@angular/core';
-import { NgForm } from '@angular/forms';
 import { Title } from '@angular/platform-browser';
 import { DispatcherService } from '../core/services/dispatcher.service';
-import { UserService } from '../core/services/user.service';
 import { PageComponent } from '../page/page.component';
 
 @Component({
@@ -27,9 +25,9 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  sendMessage (data: NgForm) {
-    if (data.value.username) {
-      this.dispatcher.dispatch({type: 'LOGIN', data: data.value})
+  sendMessage () {
+    if (this.username) {
+      this.dispatcher.dispatch({type: 'LOGIN', data: this.username})
     }
   }
 }

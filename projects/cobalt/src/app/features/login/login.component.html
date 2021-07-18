@@ -1,0 +1,21 @@
+<mat-card>
+    <pre>
+        {{ store | async | json }}
+    </pre>
+    <form class="example-form" (click)="connect()" >
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>name</mat-label>
+          <input required
+            minlength="2"
+            maxlength="12" 
+            name="username" 
+            type="text" 
+            matInput 
+            [(ngModel)]="username">
+        </mat-form-field>
+        
+        <!-- <em  *ngIf="elloForm.dirty && elloForm.touched">Erreur dans le formulaire</em> -->
+        <button mat-raised-button color="primary">Envoyer</button>
+      </form>
+      
+</mat-card>
